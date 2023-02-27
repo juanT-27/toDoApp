@@ -15,47 +15,52 @@
   </head>
   <body>
     <header class="header">
-        <button class="lightBtn midText btnNav"><i class="fa-solid fa-bars"></i></button>
-
-        <div class="header__logo">
-           <p class="midText2"> To-do App</p>
-          </div>
+      <button class="lightBtn midText btnNav" id="navMenu">
+        <i class="fa-solid fa-bars" id="navMenu"></i>
+      </button>
 
       <div class="navbar">
-        <button class="darkBtn btnNav midText"> <a href="#"> <i class="fa-solid fa-right-to-bracket"></i></a></button>
-        <button class="lightBtn btnNav midText"><i class="fa-solid fa-user"></i></button>
-        
+        <button class="darkBtn btnNav midText">
+          <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+        <button class="lightBtn btnNav midText">
+          <i class="fa-solid fa-user"></i>
+        </button>
       </div>
-     
     </header>
-    <div class="leftMenu">
-    
-    
-    <div class="leftMenu__navbar">
+    <div class="leftMenu hidden">
+      <div class="leftMenu__navbar">
         <ul>
-            <li class="linkNav">
-             <a href="https://todoist.com/app/today" class="midText2"><i class="fa-solid fa-house "></i>Menu</a> 
-            </li>
           <li class="linkNav">
-            <a href="#" class="midText2"><i class="fa-solid fa-calendar-week"></i>For Today</a>
+            <a href="https://todoist.com/app/today" class="midText2"
+              ><i class="fa-solid fa-house"></i>Menu</a
+            >
           </li>
           <li class="linkNav">
-            <a href="#" class="midText2"><i class="fa-solid fa-calendar-week"></i>Soon</a>
+            <a href="#" class="midText2"
+              ><i class="fa-solid fa-calendar-week"></i>For Today</a
+            >
           </li>
           <li class="linkNav">
-            <a href="#" class="midText2"><i class="fa-solid fa-magnifying-glass"></i>Filter</a>
+            <a href="#" class="midText2"
+              ><i class="fa-solid fa-calendar-week"></i>Soon</a
+            >
+          </li>
+          <li class="linkNav">
+            <a href="#" class="midText2"
+              ><i class="fa-solid fa-magnifying-glass"></i>Filter</a
+            >
           </li>
         </ul>
 
         <ul class="leftMenu__UserProyects">
-          <button class="darkBtn midText bigBtn ">
+          <button class="darkBtn midText bigBtn" >
             Add New Proyect <i class="fa-solid fa-plus"></i>
           </button>
         </ul>
 
         <button class="darkMode lightBtn midText">🌚🌞</button>
-    </div>
-      
+      </div>
     </div>
 
     <main>
@@ -64,24 +69,93 @@
           <div class="welcomeImage">
             <img src="" alt="" />
           </div>
-          
-           <p class="bigText">Welcome</p>
-           <p class=" bigText"> with our Help you can organize your daily tasks,</p>
+
+          <p class="bigText">Welcome</p>
+          <p class="bigText">
+            with our Help you can organize your daily tasks,
+          </p>
           <p class="midText2">
             Here you can add new proyects and For each proyect you will be able
             to add the corresponding Taks.
           </p>
-          <p class="midText2">
-            Let's start with your first proyect
-          </p>
+          <p class="midText2">Let's start with your first proyect</p>
 
-          <button class="darkBtn midText bigBtn">
-            Add New Proyect <i class="fa-solid fa-plus"></i>
-          </button>
+         <a href="#projectForm"><button class="darkBtn midText bigBtn" id="callingForm">
+          Add New Proyect <i class="fa-solid fa-plus"></i>
+        </button></a> 
         </div>
       </section>
+
+      <header class="proyectsHeaders">
+        <p class="bigText">Your Proyects</p>
+       
+      </header>
+
+      <section class="proyectsOutput container" >
+         
+
+          
+       
+      </section>
+
+      <form action="" class="formNewTask hidden" id="formtasks" >
+        
+        <a class="formClose2 formTaskClose" > <i class="fa-solid fa-x formTaskClose" ></i></a  >
+          <div class="inputBox">
+            <label for="tasks " class="midText labelText"> task title </label>
+            <input
+              type="text"
+              class="input smallText"
+              placeholder="ex: investigate"
+              id="newtask"
+              minlength="10"
+            />
+          </div>
+        
+          <div class="inputBox">
+            <label for="tasks" class="midText labelText">
+              Task description
+            </label>
+            <input
+             type="text" 
+             class="input smallText"
+             placeholder="How to use Angular"
+             id="newTaskDes" 
+             minlength="10"/>
+          </div>
+        
+          <input type="submit" class="darkBtn submit " id="submitTask"/>`
+      </form>
+
+      <div class="hidden modal" id="modal">
+        <div class="proyectForm-container" id="projectForm">
+          <i class="fa-solid fa-x formClose" id="formClose"></i>
+          <div class="formImg">
+            <img
+              src="https://img.freepik.com/foto-gratis/portapapeles-3d-papel-lista-verificacion-tareas-pendientes-verde_107791-14913.jpg?w=740&t=st=1676944196~exp=1676944796~hmac=a87ef76afd99c5bde48bd66ac71106869ff766d801507840481ab7bf21b76492"
+              alt=""
+            />
+          </div>
+
+          <form action="" class="proyectForm" >
+            <div class="inputBox">
+              <label for="proyect " class="midText labelText"> Proyect </label>
+              <input
+                type="text"
+                class="input smallText"
+                placeholder="ex: Essay"
+                id="proyectName"
+              />
+            </div>
+            <input type="submit" class="darkBtn submit" id="submit" />
+          </form>
+        </div>
+      </div>
+
+      
     </main>
 
+    <script src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/cf733db6d2.js"
       crossorigin="anonymous"
